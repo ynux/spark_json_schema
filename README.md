@@ -39,6 +39,6 @@ scala>
 ```
 
 Not good.
-
+Compare the output of `accountSchema.printTreeString()` to the inferred schema.
 
 

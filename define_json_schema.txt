@@ -12,8 +12,6 @@ val subcategorySchema = StructType(Array(
 #  StructField("categoryDesc", StringType) ::
 #  StructField("value", StringType, true) :: Nil)
 
-val subcategorySchema = ArrayType(StringType)
-
 val categorySchema = StructType(Array(
   StructField("currentinfo", currentinfoSchema, true),
   StructField("subcategory", subcategorySchema, true),
@@ -22,10 +20,10 @@ val categorySchema = StructType(Array(
 val accountdetailsSchema = StructType(StructField("category", categorySchema, true) ::
   StructField("total", DoubleType, true) :: Nil)
 
-val accountSchema = StructType(
-  StructField("accountid", StringType, true) ::
-  StructField("accountdetails", accountdetailsSchema, true) ::
-  StructField("billdate", StringType, true) :: Nil)
+#val accountSchema = StructType(
+#  StructField("accountid", StringType, true) ::
+#  StructField("accountdetails", accountdetailsSchema, true) ::
+#  StructField("billdate", StringType, true) :: Nil)
 
 val accountSchema = StructType(Array(
   StructField("accountid", StringType, true),
