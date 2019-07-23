@@ -1,0 +1,3 @@
+{ "billdate":"2016-08-08", "accountid":"xxx", "accountdetails":{ "total":"1.1", "category":[ { "desc":"one", "currentinfo":{ "value":"10" }, "subcategory":[ { "categoryDesc":"sub", "value":"10", "currentinfo":{ "value":"10" } }] }] } }
+{ "billdate":"2016-09-08", "accountid":"yyy", "accountdetails":{ "total":"1.1", "category":[ { "desc":"one", "currentinfo":{ "value":"20" }, "subcategory":[ { "categoryDesc":"sub", "value":"20", "currentinfo":{ "value":"20" } }] }] } }
+{ "billdate":"2016-10-08", "accountid":"zzz", "accountdetails":{ "total":"1.1", "category":[ { "desc":"one", "currentinfo":{ "value":"30" }, "subcategory":[ { "categoryDesc":"sub", "value":"30", "currentinfo":{ "value":"30" } }] }] } }

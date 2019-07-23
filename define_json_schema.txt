@@ -1,0 +1,37 @@
+# https://mapr.com/docs/61/Spark/LoadDataDataFrameExplicitSchema.html
+import org.apache.spark.sql.types._
+
+val currentinfoSchema = StructType(StructField("value", IntegerType, true) :: Nil)
+val subcategorySchema = StructType(Array( 
+  StructField("currentinfo", currentinfoSchema, true),
+  StructField("categoryDesc", StringType),
+  StructField("value", StringType, true)
+  ))
+#val subcategorySchema = ArrayType( 
+#  StructField("currentinfo", currentinfoSchema, true) ::
+#  StructField("categoryDesc", StringType) ::
+#  StructField("value", StringType, true) :: Nil)
+
+val subcategorySchema = ArrayType(StringType)
+
+val categorySchema = StructType(Array(
+  StructField("currentinfo", currentinfoSchema, true),
+  StructField("subcategory", subcategorySchema, true),
+  StructField("desc", StringType, true)
+  ))
+val accountdetailsSchema = StructType(StructField("category", categorySchema, true) ::
+  StructField("total", DoubleType, true) :: Nil)
+
+val accountSchema = StructType(
+  StructField("accountid", StringType, true) ::
+  StructField("accountdetails", accountdetailsSchema, true) ::
+  StructField("billdate", StringType, true) :: Nil)
+
+val accountSchema = StructType(Array(
+  StructField("accountid", StringType, true),
+  StructField("accountdetails", accountdetailsSchema, true),
+  StructField("billdate", StringType, true)
+  ))
+
+# when you print the schema now, we want to see the same tree as in 
+categorySchema.printTreeString()

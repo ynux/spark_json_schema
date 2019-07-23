@@ -1,0 +1,22 @@
+
+categorySchema.printTreeString()
+
+root
+ |-- accountdetails: struct (nullable = true)
+ |    |-- category: array (nullable = true)
+ |    |    |-- element: struct (containsNull = true)
+ |    |    |    |-- currentinfo: struct (nullable = true)
+ |    |    |    |    |-- value: string (nullable = true)
+ |    |    |    |-- desc: string (nullable = true)
+ |    |    |    |-- subcategory: array (nullable = true)
+ |    |    |    |    |-- element: struct (containsNull = true)
+ |    |    |    |    |    |-- categoryDesc: string (nullable = true)
+ |    |    |    |    |    |-- currentinfo: struct (nullable = true)
+ |    |    |    |    |    |    |-- value: string (nullable = true)
+ |    |    |    |    |    |-- value: string (nullable = true)
+ |    |-- total: string (nullable = true)
+ |-- accountid: string (nullable = true)
+ |-- billdate: string (nullable = true)
+
+
+
